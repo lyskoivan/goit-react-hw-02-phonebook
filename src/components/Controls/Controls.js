@@ -1,12 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from './Controls.module.css';
 
 const Controls = ({ nextPage, prevPage, prevBtnDisabled, nextBtnDisabled }) => (
   <section>
-    <button type="button" onClick={prevPage} disabled={prevBtnDisabled}>
+    <button
+      type="button"
+      className={styles.navButton}
+      onClick={prevPage}
+      disabled={prevBtnDisabled}
+    >
       Назад
     </button>
-    <button type="button" onClick={nextPage} disabled={nextBtnDisabled}>
+    <button
+      type="button"
+      className={styles.navButton}
+      onClick={nextPage}
+      disabled={nextBtnDisabled}
+    >
       Вперед
     </button>
   </section>
